@@ -15,7 +15,6 @@ float soldierY;
 float robotX, robotY;
 //lazer
 float lazerWidth=40;
-float lazerWidthMax = 40;
 int lazerSpeed = -2;
 float lazerX;
 float lazerOffset;
