@@ -62,21 +62,23 @@ void draw() {
   soldierX += 5;
   if(soldierX>640+soldier.width){
     soldierX=-80;
+    
+ 
   }//loop from left to right
     ;
   image(soldier,soldierX,soldierY);
- 
+  
+  //set robot
+  image(robot,robotX,robotY);
+  
   //lazer
   stroke(255,0,0);
   strokeWeight(10);
   lazerOffset--;
   lazerOffset %= grid*2;
-  lazerX=robotX+lazerOffset;
-  line(lazerX,robotY+37,min(lazerX+lazerWidth,robotX),robotY+37);
-  
-  
-  //set robot
-  image(robot,robotX,robotY);
+  lazerX=robotX+25+lazerOffset;
+  line(lazerX,robotY+37,min(lazerX+lazerWidth,robotX+25),robotY+37);
+ 
   
 	// Enter Your Code Here
 }
