@@ -1,3 +1,5 @@
+
+
 //PImage
 PImage bg;
 PImage groundhog;
@@ -21,8 +23,8 @@ float lazerOffset;
 
 
 void setup() {
-	size(640, 480, P2D);
-	// Enter Your Setup Code Here
+  size(640, 480, P2D);
+  // Enter Your Setup Code Here
   // loadImage
   bg = loadImage("img/bg.jpg");
   groundhog = loadImage("img/groundhog.png");
@@ -74,11 +76,11 @@ void draw() {
   //lazer
   stroke(255,0,0);
   strokeWeight(10);
-  lazerOffset--;
-  lazerOffset %= grid*2;
+  lazerOffset-=2;
+  lazerOffset %= grid*2+25;
   lazerX=robotX+25+lazerOffset;
   line(lazerX,robotY+37,min(lazerX+lazerWidth,robotX+25),robotY+37);
- 
+println(min(lazerX+lazerWidth,robotX+25)-lazerX);
   
-	// Enter Your Code Here
+  // Enter Your Code Here
 }
