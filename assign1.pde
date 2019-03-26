@@ -80,7 +80,7 @@ void draw() {
   lazerOffset %= grid*2+25;
   lazerX=robotX+25+lazerOffset;
   line(lazerX,robotY+37,min(lazerX+lazerWidth,robotX+25),robotY+37);
-println(min(lazerX+lazerWidth,robotX+25)-lazerX);
+  //println(min(lazerX+lazerWidth,robotX+25)-lazerX);
   
   // Enter Your Code Here
 }
